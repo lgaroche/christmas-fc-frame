@@ -11,8 +11,8 @@ export async function generateMetadata() {
     },
     other: {
       "fc:frame": "vNext",
-      "fc:frame:post_url": "/",
-      "fc:frame:image": "/opengraph-image",
+      "fc:frame:post_url": `${process.env['HOST']}`,
+      "fc:frame:image": `${process.env['HOST']}/opengraph-image`,
       "fc:frame:button:1": "Check again"
     }
   }
