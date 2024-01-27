@@ -7,12 +7,12 @@ export async function generateMetadata() {
   return {
     title: 'Is it Christmas?',
     openGraph: {
-      images: ["/opengraph-image"]
+      images: [`${process.env['HOST']}/opengraph-image`]
     },
     other: {
       "fc:frame": "vNext",
       "fc:frame:post_url": `${process.env['HOST']}`,
-      "fc:frame:image": `${process.env['HOST']}/opengraph-image`,
+      "fc:frame:image": `${process.env['HOST']}/opengraph-image?t=${Date.now()}`,
       "fc:frame:button:1": "Check again"
     }
   }
